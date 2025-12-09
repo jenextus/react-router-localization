@@ -1,0 +1,23 @@
+{
+  "name": "react-router-localization",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter ./examples/react-router dev",
+    "build": "pnpm --filter ./examples/react-router build",
+    "start": "pnpm --filter ./examples/react-router start",
+    "build:packages": "pnpm --filter \"./packages/**\" build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.0.0",
+    "vite-plugin-devtools-json": "^1.0.0",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
