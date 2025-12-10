@@ -38,15 +38,11 @@ This package provides two entry points:
 
 | Entry Point | Import Path | Environment | Description |
 |-------------|-------------|-------------|-------------|
-| Main | `i18next-react-router` | Client & Server | Core APIs: `createConfig`, `createMiddleware`, `appWithTranslation` |
-| Node | `i18next-react-router/node` | Server only | Server utilities: `loadTranslations` |
+| Main | `i18next-react-router` | Client & Server | Core APIs: `createConfig`, `createMiddleware`, `appWithTranslation`, `loadTranslations` |
 
 ```typescript
-// Client & Server
 import { createConfig, createMiddleware, appWithTranslation } from "i18next-react-router";
 
-// Server only (loaders, actions)
-import { loadTranslations } from "i18next-react-router/node";
 ```
 
 ## Quick Start
@@ -90,7 +86,7 @@ import {
   ScrollRestoration,
 } from "react-router";
 import { appWithTranslation, createMiddleware } from "i18next-react-router";
-import { loadTranslations } from "i18next-react-router/node";
+import { loadTranslations } from "i18next-react-router";
 import type { Route } from "./+types/root";
 
 // Import your i18n configuration
@@ -255,16 +251,12 @@ export default appWithTranslation(App);
 
 ---
 
-### Node Entry (`i18next-react-router/node`)
-
 #### `loadTranslations(args, options?)`
 
 Load translations in a route loader. Returns translation data to be hydrated on the client.
 
-> ⚠️ **Note:** This function is only available from `i18next-react-router/node` and should only be used in server-side code (loaders, actions).
-
 ```typescript
-import { loadTranslations } from "i18next-react-router/node";
+import { loadTranslations } from "i18next-react-router";
 
 export const loader = async (args: Route.LoaderArgs) => {
   const translations = await loadTranslations(args);
