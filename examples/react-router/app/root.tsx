@@ -10,8 +10,7 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import { appWithTranslation, createMiddleware } from "~/packages/i18next/src";
-import { loadTranslations } from "~/packages/i18next/src/node";
+import { appWithTranslation, createMiddleware, loadTranslations } from "~/packages/i18next/src";
 import "./i18n";
 
 export const links: Route.LinksFunction = () => [

@@ -11,7 +11,6 @@ export default defineConfig({
       formats: ["cjs", "es"],
       entry: {
         index: "src/index.ts",
-        "node": "src/node.ts",
       },
     },
     rollupOptions: {

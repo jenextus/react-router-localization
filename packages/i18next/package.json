@@ -1,7 +1,7 @@
 {
   "name": "i18next-react-router",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "sideEffects": false,
   "main": "./dist/index.cjs",
@@ -16,13 +16,17 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    },
-    "./node": {
-      "types": "./dist/node.d.ts",
-      "import": "./dist/node.js",
-      "require": "./dist/node.cjs"
     }
-  },  "scripts": {
+  },
+  "keywords": [
+    "react-router",
+    "i18n",
+    "i18next",
+    "ssr",
+    "react-router-i18next",
+    "remix-i18next"
+  ],
+  "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"
   },

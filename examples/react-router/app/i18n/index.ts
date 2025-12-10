@@ -3,6 +3,10 @@ import type { ConfigurationOptions } from "~/packages/i18next/src";
 
 const options: ConfigurationOptions = {
   fallbackLng: "en",
+  detection: {
+    detect: (args) =>
+      new URL(args.request.url).searchParams.get("lng") ?? undefined,
+  },
 };
 
 if (import.meta.env.SSR) {
